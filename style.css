@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --daniel:hsl(263, 55%, 52%);
+    --walters:hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --grayish-blue: hsl(210, 46%, 95%);
+}
+body {
+    font-family: Barlow Semi Condensed;
+    background-color: rgb(203, 214, 214);
+    min-height: 110vh;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    border-radius: 11px;
+    padding: 1rem;
+    font-size: 11px;
+}
+.container {
+    max-width: 49rem;
+    display: grid;
+    grid-template-areas: 'daniel daniel daniel walter whittle'
+    'harmon abrams abrams abrams whittle';    
+    grid-gap: 10px;
+    margin-bottom: 3rem;
+}
+header {
+    display: flex;
+}
+figcaption  {
+    margin-left: 11px;
+}
+figcaption
+ .short {
+    color: var(--blackish-blue);
+}
+.classs {
+    color: hsl(213, 4%, 47%);
+}
+img {
+    height: 2rem;
+    border-radius: 1rem;
+}
+h3 {
+    color: var(--White);
+    font-size: 13px;
+}
+p {
+    font-size: 11px;
+    color: var(--light-gray);
+}
+.daniel {
+    max-width: 25rem;
+    background-color: var(--daniel);
+    grid-area: daniel;
+    /* grid-column: 1/span 3; */
+}
+.walters {
+    max-width: 12rem;
+    grid-area: walter;
+    background-color: var(--walters);
+}
+.harmon {
+    max-width: 12rem;
+    background-color: brown;
+    grid-area: harmon;
+}
+.abrams {
+    background-color: var(--blackish-blue);
+    grid-area: abrams;
+}
+.whittle {
+    max-width: 12rem;
+    grid-area: whittle;
+}
+.whittle, 
+.harmon {
+    background-color: var(--White);
+}
+.content .short {
+    color: var(--blackish-blue);
+}
+.classs {
+    color: hsl(213, 4%, 47%);
+}
+.content {
+    margin-top: 1rem;
+}
+.content p {
+    margin-top: 1rem;
+}
+.sub-content {
+    font-weight: 600;
+    color: var(--grayish-blue);
+    font-size: 16px;
+}
+
+@media (max-width:765px) {
+    .container {
+        display: grid;
+        grid-template-areas: 'daniel' 'daniel' 'walters' 'harmon' 'abrams' 'abrams' 'whittle' 'whittle';
+    }
+    .daniel {
+        max-width: 15rem;
+        grid-area: daniel;
+    }
+    .walters {
+        max-width: 15rem;
+        grid-area: walters;
+    }
+    .harmon {
+        max-width: 15rem;
+        grid-area: harmon;
+    }
+    .abrams {
+        grid-area: abrams;
+        max-width: 15rem;
+    }
+    .whittle {
+        max-width: 15rem;
+        grid-area: whittle;
+    }
+}
